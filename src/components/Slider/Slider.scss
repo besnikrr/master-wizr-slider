@@ -1,0 +1,190 @@
+.content {
+  position: relative;
+  background: #F8F8F8;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .nav {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      padding: 0px 15px;
+      text-align: center;
+    }
+
+    .image-small {
+      width: 6.25rem;
+      height: 6.25rem;
+      border-radius: 0.938rem;
+      cursor: pointer;
+    }
+
+    .hover {
+      transition-duration: 1s;
+      transform: scale(1.12);
+    }
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .image {
+      width: 62.5rem;
+      height: 31.25rem;
+      border-radius: 0.313rem;
+    }
+
+    .right-arrow {
+      position: absolute;
+      top: 65%;
+      right: 15%;
+      font-size: 3rem;
+      color: lightgrey;
+      z-index: 10;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .left-arrow {
+      position: absolute;
+      top: 65%;
+      left: 15%;
+      font-size: 3rem;
+      color: lightgrey;
+      z-index: 10;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .slide {
+      opacity: 0;
+      transition-duration: 1s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transition-duration: 1s;
+      transform: scale(1.08);
+    }
+  }
+}
+
+@media only screen and (max-width: 1720px) {
+  .content {
+    .nav {
+      .image-small {
+        width: 5.125rem;
+        height: 5.125rem;
+      }
+    }
+    .carousel {
+      .image {
+        width: 42.25rem;
+        height: 25.5rem;
+        border-radius: 0.313rem;
+      }
+      .right-arrow {
+        font-size: 2rem;
+        top: 62.5%;
+        right: 5%;
+      }
+
+      .left-arrow {
+        font-size: 2rem;
+        top: 62.5%;
+        left: 5%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1214px) {
+  .content {
+    .nav {
+      .image-small {
+        width: 5.125rem;
+        height: 5.125rem;
+      }
+    }
+    .carousel {
+      .image {
+        width: 23.25rem;
+        height: 16.5rem;
+        border-radius: 0.313rem;
+      }
+
+      .right-arrow {
+        font-size: 2rem;
+        top: 62.5%;
+        right: 5%;
+      }
+
+      .left-arrow {
+        font-size: 2rem;
+        top: 62.5%;
+        left: 5%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+    padding: 0 15px;
+
+    .title {
+      font-size: 1rem;
+    }
+    .nav {
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      width: 100%;
+
+      .item {
+        padding: 0px 5px;
+      }
+
+      .image-small {
+        width: 4.125rem;
+        height: 4.125rem;
+      }
+
+      p {
+        font-size: 10px
+      }
+
+    }
+
+    .carousel {
+      .image {
+        width: 22.25rem;
+        height: 15.5rem;
+        border-radius: 0.313rem;
+      }
+
+      .right-arrow {
+        display: none;
+      }
+
+      .left-arrow {
+        display: none;
+      }
+    }
+  }
+}
